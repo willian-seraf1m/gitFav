@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color: #000000;
+  --input-bg-color: rgba(6, 24, 28, 1);
+  --input-text-color: rgba(124, 124, 138, 1);
+  --favorite-buttom-color: #065e7c;
+  --remove-buttom-color: #f75a68;
+  --tr-bg: #092d38;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-color);
+  color: #fff;
+}
+
+#app {
+  max-width: 1200px;
+  padding: 3.2rem;
+  margin: 0 auto;
+  margin-top: 115px;
+}
+
+#app header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#app header input {
+  font-size: 1.6rem;
+  width: 43rem;
+  color: var(--input-text-color);
+  background: var(--input-bg-color);
+  padding: 1.6rem;
+  border: 0;
+  border-radius: .5rem;
+}
+
+#app header button {
+  font-size: 1.4rem;
+  color: #ffffff;
+  background: var(--favorite-buttom-color);
+  padding: 1.2rem 3.2rem;
+  border-radius: .5rem;
+  border: 0;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  cursor: pointer;
+  transition: background-color .5s;
+}
+
+#app header button:hover {
+  background: rgb(6, 106, 139);
+}
+
+#app header .search {
+  display: flex;
+  gap: .8rem;
+}
+
+table {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin-top: 8.2rem;
+  border-collapse: collapse;
+  border: solid 1px #065e7c;
+  overflow-y: scroll;
+}
+
+.usersUndefined {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  border: 1px solid #065e7c;
+  border-top: 0;
+}
+
+html.noUser .usersUndefined {
+  display: none;
+}
+
+.usersUndefined img {
+  width: 132px;
+}
+
+.usersUndefined p {
+  color: #4E5455;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+table th {
+  padding: 1.6rem 4rem;
+  background-color: var(--tr-bg);
+}
+
+table td {
+  padding: 1.6rem 4rem;
+}
+
+table .user {
+  display: flex; 
+  align-items: center;
+  gap: 2.6rem;
+}
+
+table .user a {
+  color: #fff;
+  text-decoration: none;
+
+}
+
+table tbody .user img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+table tr {
+  text-align: left;
+}
+
+table tr:nth-child(even) {
+  background-color: #092d3883;
+  border-top: 1px solid #065e7c;
+  border-bottom: 1px solid #033b4e;
+}
+
+table tr .remove {
+  color: var(--remove-buttom-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
